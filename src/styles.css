@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    border-radius: 5px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: rgb(36, 45, 45);
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 2em;
+    padding: 0.5em;
+    will-change: filter;
+    transition: filter 300ms;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+h3{
+    padding-inline:10%;
+    color:#d2d2d2;
+    font-weight:400;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+    color: #535bf2;
+}
+
+header {
+    height:60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10px;
+    padding-block: 5px;
+    background-color: #e3f7ff;
+    filter: drop-shadow(0 0 0.4em hsla(0, 0%, 0%, 0.2));
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 20px;
+    font-weight: 500;
+    color: #000765;
+}
+nav li:hover {
+    cursor: pointer;
+    color: #1ea3c1;
+}
+
+button {
+    background-color: greenyellow;
+    border: 1px solid transparent;
+    padding: 0.8em 1.2em;
+    font-size: 0.9em;
+    height:40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+button:hover {
+    border-color: white;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+p{
+    font-size:large;
+    font-weight: 800;
+}
+p img {
+    display: inline-block;
+}
+
+form{
+    margin-block:3%;
+    margin-inline:10%;
+}
+form button{
+    width:100%;
+    background-color: #34cff2;
+    margin-block:2px;
+}
+
+.taskinput {
+    width:100%;
+    padding: 9px 20px;
+    margin-bottom:3px;
+    color:white;
+    box-sizing: border-box;
+    border: 2px solid #a7a7a7;
+    font-size: 18px;
+    background-color:#3a6767;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.taskinput::placeholder {
+    color: #a7a7a7; /* Set your desired placeholder text color here */
+}
+
+.taskinput:focus {
+    border-color: #9bedff;
+    box-shadow: 0 0 8px rgba(100, 108, 255, 0.4);
+    outline: none;
+}
+
+.dateinput{
+    color:#d2d2d2;
+    font-weight:400;
+
+}
+input[type="date"] {
+    width: 150px;
+    padding: 5px;
+    margin:0.8%;
+    font:inherit;
+    font-size: 14px;
+    border: 2px solid #59deff;
+    border-radius: 5px;
+    background-color: #5c5c5c;
+    color:white;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+.tasklist{
+    background-color:#487474;
+    padding:25px;
+    font-size:18px;
+    font-weight: 500;
+    color:white;
+    margin-inline:10%;
+}
+.tasklist input{
+    width:18px;
+    height:18px;
+}
+
+.eachtask div button{
+    margin-inline:4px;
+    margin-bottom:10px;
+}
+
+.eachtask span{
+    display:flex;
+    justify-content:space-between;
+}
+
+.dte{
+    font-size:0.7em;
+    padding-top:7px;
+    font-weight:400;
+    color:lightgrey;
+}
+
+.deletebtn{
+    color:white;
+    font-weight:400;
+    font-size: small;
+    padding-top:4px;
+    height:28px;
+    color:#ff6a6a;
+    border-color:#ff6a6a;
+    border-width: 2px;
+    background-color: #487474;
+}
+.deletebtn:hover{
+    background-color: #ff6a6a;
+    color:white;
+    border-color:#ff6a6a;
+}
+
+.markbtn{
+    color:white;
+    font-weight:400;
+    font-size: small;
+    padding-top:4px;
+    height:28px;
+    color:#31ffdd;
+    border-color:#31ffdd;
+    border-width: 2px;
+    background-color: #487474;
+}
+.markbtn:hover{
+    background-color: #31ffdd;
+    color:black;
+    border-color:#31ffdd;
+}
+
+.editbtn{
+    color:white;
+    font-weight:400;
+    font-size: small;
+    padding-top:4px;
+    height:28px;
+    color:#fff531;
+    border-color:#fff531;
+    border-width: 2px;
+    background-color: #487474;
+}
+.editbtn:hover{
+    background-color: #fff531;
+    color:black;
+    border-color:#fff531;
+}
