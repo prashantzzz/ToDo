@@ -9,5 +9,7 @@ A todo app to list tasks with due date, having features to add, edit and delete 
 Download zip file of this repo
 Extract and open the folder in VS Code
 Open command line(ctrl + `) and type the following:
-npm i
-npm run dev
+
+`npm i`
+
+`npm run dev`
