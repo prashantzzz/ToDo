@@ -11,5 +11,4 @@ Extract and open the folder in VS Code
 Open command line(ctrl + `) and type the following:
 
 `npm i`
-
 `npm run dev`
