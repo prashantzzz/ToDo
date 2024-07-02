@@ -5,7 +5,7 @@ import { useState } from 'react'
 // prop: Used to pass to a function/component for setting initial value, displays value
 // state: Used inside a function/component for updating the value, state changes-> rerenders
 
-export default function App() {
+export default function App(){
   const [cnt, setcnt]=useState(0); //cnt=0
   const [todos, settodos]=useState([]); //[] is the datatype of todos
   const [inpt, setinpt]=useState("");
@@ -14,11 +14,13 @@ export default function App() {
   
   function handleSubmit(e){
     e.preventDefault();
+    const parsedate= (datevar) => new Date(datevar);
     let tmp=e.target.elements.task.value; //user input
     tmp=tmp.trim();
     if(tmp){
-      settodos([...todos, { text:tmp, completed:false, marktxt:"Mark", date1:dte }]); //todos=[...todos,x] => todos.append(x)
-      //here x is an object with 2 attributes^
+      const updatedtasks=[...todos, { text:tmp, completed:false, marktxt:"Mark", date1:dte }];
+      settodos(updatedtasks.sort((a,b)=>parsedate(a.date1)-parsedate(b.date1))); //todos=[...todos,x] => todos.append(x)
+      //here x is an object with 2 attributes
       setcnt(cnt+1);
       e.target.reset();
     }
@@ -35,6 +37,7 @@ export default function App() {
   function editit(index){
     const todolist=[...todos];
     setinpt(todolist[index].text);
+    setdate(todolist[index].date1);
     //the text from clicked task should get filled into input then following deletion should happen
     todolist.splice(index,1); //remove current element from task list
     settodos(todolist);
@@ -80,8 +83,9 @@ export default function App() {
             <span style={{  fontWeight:newtask.completed ? '400': '600',
                             textDecoration:newtask.completed? 'line-through':'none',
                             color:newtask.completed? 'lightgrey':'white'
-            }}> 
-              <span><input type="checkbox" checked={newtask.completed} onChange={()=>markdone(index)} />{newtask.text}</span> <div className="dte">{newtask.date1}</div>
+            }}>
+              <span><input type="checkbox" checked={newtask.completed} onChange={()=>markdone(index)} />{newtask.text}</span> 
+              <div className="dte">{newtask.date1}</div>
             </span>
             <div>
               

@@ -1,5 +1,4 @@
 import "./styles.css";
-import gzlogo from "./assets/todo.png";
 import { useState } from 'react';
 
 export default function App() {
@@ -21,18 +20,6 @@ export default function App() {
 
   return (
     <>
-      <header>
-        <p><img className="logo" src={gzlogo} alt="Logo" />ToDo</p>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-        <button>Login</button>
-      </header>
-
       <form onSubmit={handleSubmit}>
         <input className="taskinput" name="task" placeholder="Enter task here" spellCheck="false" />
         <button type="submit">Add</button>
