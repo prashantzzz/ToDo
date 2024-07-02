@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import './profile.css'
-export default function App() {
-
+import React from 'react';
+import Todo_img from './assets/todo.png'
+import './assets/styles.css'
+export default function Profile() {
     return (
         <>
             <body>
                 <div class="profile-container">
                     <div class="profile-header">
-                        <img src="assets/todo.png" alt="Profile Picture" class="profile-image">
-                            <h1 class="profile-name">ToDo</h1>
+                        <img src={Todo_img} alt="Profile Picture" class="profile-image"/>
+                            <h1 class="profile-name">ToDo Profile Page</h1>
                             <p class="profile-bio">A todo app in React to list tasks with due date, having features to add, edit and delete them.</p>
                     </div>
                     <div class="profile-content">

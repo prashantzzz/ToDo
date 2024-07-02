@@ -1,39 +1,34 @@
-import "./styles.css";
-import { useState } from 'react';
-
-export default function App() {
-  const [todos, setTodos] = useState([]); // [] is the datatype of todos
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const newTask = e.target.elements.task.value;
-    if (newTask) {
-      setTodos([...todos, newTask]); //todos.append(newTask)
-      e.target.reset();
-    }
-  }
-
-  function deleteTask(index) {
-    const newTodos = todos.filter((_, i) => i !== index);
-    setTodos(newTodos);
-  }
-
-  return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <input className="taskinput" name="task" placeholder="Enter task here" spellCheck="false" />
-        <button type="submit">Add</button>
-        <button type="reset">Reset</button>
-      </form>
-
-      <div className="tasklist" id="tasklist">
-        {todos.map((todo, index) => (
-          <label key={index} className="eachtask">
-            <span><input type="checkbox" /> {todo}</span>
-            <button className="deletebtn" onClick={() => deleteTask(index)}>Delete</button>
-          </label>
-        ))}
-      </div>
-    </>
-  );
+import React from 'react';
+import Todo_img from './assets/todo.png'
+import './assets/styles.css'
+export default function About() {
+    return (
+        <>
+            <body>
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <img src={Todo_img} alt="Profile Picture" class="profile-image"/>
+                            <h1 class="profile-name">About Page</h1>
+                            <p class="profile-bio">A todo app in React to list tasks with due date, having features to add, edit and delete them.</p>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-card">
+                            <h2>Design</h2>
+                            <p>User friendly UI</p>
+                        </div>
+                        <div class="profile-card">
+                            <h2>Add / Edit</h2>
+                            <p>Features to edit the task later.</p>
+                        </div>
+                        <div class="profile-card">
+                            <h2>Delete</h2>
+                            <p>An option to delete the task.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </body>
+        </>
+    );
 }
+
