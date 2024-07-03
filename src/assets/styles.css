@@ -48,6 +48,9 @@ a:hover {
 }
 
 header {
+    position:sticky;
+    top:0;
+    z-index: 99;
     height:60px;
     display: flex;
     justify-content: space-between;
@@ -55,21 +58,21 @@ header {
     padding-inline: 10px;
     padding-block: 5px;
     background-color: #e3f7ff;
-    filter: drop-shadow(0 0 0.4em hsla(0, 0%, 0%, 0.2));
+    filter: drop-shadow(0 0 0.4em hsla(0, 0%, 0%, 0.5));
 }
 
 nav ul {
     padding: 0;
     margin: 0;
 }
-nav li {
+li {
     list-style-type: none;
     display: inline-block;
     padding: 0 20px;
     font-weight: 500;
     color: #000765;
 }
-nav li:hover {
+li:hover {
     cursor: pointer;
     color: #1ea3c1;
 }
@@ -304,7 +307,7 @@ button:disabled, button:disabled:hover{
   }
   .profile-card:hover {
     border:1px solid;
-    border-color: rgb(20, 243, 255);
+    border-color: rgb(209, 116, 255);
   }
   
   .profile-card h2 {

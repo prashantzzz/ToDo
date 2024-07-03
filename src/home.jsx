@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './assets/styles.css';
-import Todo_img from './assets/todo.png'
+import Todo_img from './assets/home.jpg'
 
 // prop: Used to pass to a function/component for setting initial value, displays value
 // state: Used inside a function/component for updating the value, state changes-> rerenders
@@ -54,14 +54,13 @@ export default function Home() {
   return ( // this is returning JSX
     <>
 
-
-      <div class="profile-container">
-        <div class="profile-header">
-          <img src={Todo_img} alt="Profile Picture" class="profile-image" />
-          <h1 class="profile-name">Todo Home Page</h1>
-          <p class="profile-bio">A todo app in React to list tasks with due date, having features to add, edit and delete them.</p>
+      <div className="profile-container">
+        <div className="profile-header">
+          <img src={Todo_img} alt="Profile Picture" className="profile-image" />
+          <h1 className="profile-name">Todo Home Page</h1>
+          <p className="profile-bio">A todo app in React to list tasks with due date, having features to add, edit and delete them.</p>
         </div>
-        <div class="profile-content">
+        <div className="profile-content">
 
         <main>
         <form onSubmit={handleSubmit}>
@@ -110,10 +109,6 @@ export default function Home() {
 
         </div>
       </div>
-
-
-
-      
     </>
   );
 }

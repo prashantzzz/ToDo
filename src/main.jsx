@@ -28,7 +28,7 @@ function Navbar() {
 
 function Driver() {
   return(
-  <Router>
+  <Router>     
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
